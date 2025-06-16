@@ -26,12 +26,13 @@ It demonstrates basic function definitions, constants, and how to structure a cl
 print(bake_time_remaining(30))           # Output: 10
 print(preparation_time_in_minutes(2))    # Output: 4
 print(elapsed_time_in_minutes(3, 20))    # Output: 26
+```
 
-🧰 Requirements
-	-	Python 3.x
-(No external libraries are required.)
+## 🧰 Requirements
+- Python 3.x
+- No external libraries are required.
 
-✅ Style
+## ✅ Style
 
 This project follows PEP 8 style guidelines and passes Pylint.
 
