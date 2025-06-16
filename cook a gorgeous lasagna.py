@@ -1,3 +1,9 @@
+"""
+Lasagna cooking time calculator.
+
+This module provides functions to calculate preparation time,
+bake time remaining, and total elapsed time for cooking a lasagna.
+"""
 # Constants
 EXPECTED_BAKE_TIME = 40  # in minutes
 PREPARATION_TIME_PER_LAYER = 2  # in minutes per layer
