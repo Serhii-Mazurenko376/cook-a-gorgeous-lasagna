@@ -8,6 +8,7 @@ bake time remaining, and total elapsed time for cooking a lasagna.
 EXPECTED_BAKE_TIME = 40  # in minutes
 PREPARATION_TIME_PER_LAYER = 2  # in minutes per layer
 
+
 def bake_time_remaining(elapsed_bake_time):
     """Calculate the bake time remaining.
     
@@ -16,6 +17,7 @@ def bake_time_remaining(elapsed_bake_time):
     """
     return EXPECTED_BAKE_TIME - elapsed_bake_time
 
+
 def preparation_time_in_minutes(number_of_layers):
     """Calculate preparation time based on number of layers.
     
@@ -23,6 +25,7 @@ def preparation_time_in_minutes(number_of_layers):
     :return: int - total prep time (in minutes).
     """
     return number_of_layers * PREPARATION_TIME_PER_LAYER
+
 
 def elapsed_time_in_minutes(number_of_layers, elapsed_bake_time):
     """Calculate total elapsed time (prep + bake).
@@ -33,6 +36,7 @@ def elapsed_time_in_minutes(number_of_layers, elapsed_bake_time):
     """
     prep_time = preparation_time_in_minutes(number_of_layers)
     return prep_time + elapsed_bake_time
+    
 
 # Example usage:
 print(bake_time_remaining(30))           # Should return 10
