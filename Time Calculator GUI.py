@@ -52,4 +52,34 @@ view.add_subview(elapsed_input)
 view.add_subview(button)
 view.add_subview(result_label)
 
+
 view.present('sheet')
+def chef_gpt_response(prompt):
+    """Simulated GPT response (can replace with real GPT later)."""
+    prompt = prompt.lower()
+    if "joke" in prompt:
+        return "Why did the lasagna go to therapy? Too many layers of issues! 😄"
+    elif "side dish" in prompt:
+        return "How about a fresh green salad or garlic bread? Classic!"
+    elif "cheese" in prompt:
+        return "If you’re using extra cheese, add 5-7 minutes to the bake time."
+    else:
+        return "I'm ChefGPT! Ask me anything about lasagna, recipes, or fun tips!"
+        
+
+gpt_input = ui.TextField(placeholder='Ask ChefGPT...', frame=(20, 210, 280, 32))
+
+gpt_button = ui.Button(title='Ask ChefGPT', frame=(20, 250, 280, 40), bg_color='orange')
+gpt_result = ui.Label(frame=(20, 300, 280, 100), number_of_lines=3)
+gpt_result.text_color = 'darkgray'
+
+def ask_chef_gpt(sender):
+    response = chef_gpt_response(gpt_input.text)
+    gpt_result.text = response
+
+gpt_button.action = ask_chef_gpt
+
+# Add to view
+view.add_subview(gpt_input)
+view.add_subview(gpt_button)
+view.add_subview(gpt_result)
